@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Restaurante Oninho — Reservas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Restaurante <span>O Ninho</span></a>
+      <nav class="nav">
+        <a href="index.html">Início</a>
+        <a href="menu.html">Menu</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="reservas.html" aria-current="page">Reservas</a>
+        <a href="contactos.html">Contacto</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-intro">
+      <h1>Reservar mesa</h1>
+      <p>Pode reservar online. Receberás confirmação por e‑mail.</p>
+    </section>
+
+    <section class="reservation-form">
+      <form id="bookingForm">
+        <div class="form-row">
+          <label for="guestName">Nome</label>
+          <input id="guestName" name="guestName" required>
+        </div>
+        <div class="form-row">
+          <label for="guestEmail">E‑mail</label>
+          <input id="guestEmail" name="guestEmail" type="email" required>
+        </div>
+        <div class="form-row">
+          <label for="date">Data</label>
+          <input id="date" name="date" type="date" required>
+        </div>
+        <div class="form-row">
+          <label for="time">Hora</label>
+          <input id="time" name="time" type="time" required>
+        </div>
+        <div class="form-row">
+          <label for="people">Pessoas</label>
+          <input id="people" name="people" type="number" min="1" max="20" value="2" required>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Confirmar reserva</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>©2025 Restaurante O Ninho</strong>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html">Início</a>
+      <a href="menu.html">Menu</a>
+      <a href="contactos.html">Contacto</a>
+    </nav>
+  </footer>
+</body>
+</html>

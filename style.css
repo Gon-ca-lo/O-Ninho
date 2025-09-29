@@ -1,0 +1,181 @@
+:root{
+  --bg:#1a1a1a; /* fundo escuro */
+  --header-bg:#2c2c34; /* cabeçalho ligeiramente mais claro */
+  --text:#e6e6e6;
+  --muted:#bbbbbb;
+  --title:#ffffff;
+  --accent:#d4af37; /* dourado */
+  --card:#2b2b33;
+  --frame-border:#3d3d46;
+  --radius:14px;
+  --max-width:1100px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:var(--max-width);margin:0 auto;padding:2rem}
+
+/* Header */
+.site-header{position:fixed;top:0;left:0;right:0;background:var(--header-bg);border-bottom:3px solid var(--accent);z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.9rem 0}
+.brand{font-family:'Playfair Display',serif;font-size:1.4rem;color:#fff;text-decoration:none}
+.brand span{color:var(--accent)}
+.nav{display:flex;gap:1.25rem;align-items:center}
+.nav a{color:#f5f5f5;text-decoration:none;font-weight:500;transition:color 0.3s}
+.nav a:hover{color:var(--accent)}
+.nav a[aria-current="page"]{border-bottom:2px solid var(--accent)}
+.nav-toggle{display:none;background:none;border:0;font-size:1.4rem;color:#fff}
+
+/* Hero */
+.hero{padding-top:8.5rem;padding-bottom:4rem;text-align:center}
+.hero-inner{display:flex;flex-direction:column;gap:1rem}
+.hero h1{font-family:'Playfair Display',serif;font-size:2.5rem;margin:0;color:var(--title)}
+.hero p{color:var(--muted);max-width:65ch;margin:0 auto}
+.hero-ctas{display:flex;gap:0.75rem;justify-content:center}
+.btn{display:inline-block;padding:0.7rem 1.2rem;border-radius:10px;border:2px solid transparent;text-decoration:none;font-weight:600;transition:all 0.3s}
+.btn-primary{background:var(--accent);color:#000;border-color:var(--accent)}
+.btn-primary:hover{background:#b38e2f;color:#fff}
+.btn-outline{background:transparent;border:2px solid var(--accent);color:var(--accent)}
+.btn-outline:hover{background:var(--accent);color:#000}
+
+/* Frames and cards */
+.card,.menu-item,.team-card,.newsletter,.reservation-form,.contact-grid div{background:var(--card);border:2px solid var(--frame-border);border-radius:var(--radius);padding:1.5rem;box-shadow:0 4px 10px rgba(0,0,0,0.4)}
+
+/* Highlights */
+.highlights{display:flex;gap:1rem;margin-top:2rem}
+.card h3{margin:0 0 0.5rem 0;color:var(--title);font-size:1.25rem}
+.card p{color:var(--muted)}
+
+/* Menu preview */
+.menu-preview{margin-top:2rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem}
+.menu-item h4{margin:0 0 0.4rem;color:var(--title);font-size:1.1rem}
+.menu-item p{margin:0;color:var(--muted)}
+
+.text-center{text-align:center;margin-top:1.2rem}
+
+/* Newsletter */
+.newsletter-inner{display:flex;flex-direction:column;gap:0.8rem;text-align:center}
+.newsletter h3{color:var(--title);margin:0}
+.newsletter p{color:var(--muted)}
+.newsletter input[type="email"]{padding:0.6rem;border-radius:8px;border:1px solid var(--frame-border);background:#1f1f25;color:var(--text);width:100%;max-width:420px}
+
+/* Footer */
+.site-footer {
+  border-top: 3px solid var(--accent);
+  background: #111;
+  margin-top: 2rem;
+  height: 30px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer-nav a{text-decoration:none;color:var(--muted);margin-left:1rem;transition:color 0.3s}
+.footer-nav a:hover{color:var(--accent)}
+
+/* Pages */
+.page-intro{padding:3.5rem 0;text-align:center}
+.page-intro h1{font-family:'Playfair Display',serif;font-size:2rem;color:var(--title);margin-bottom:0.5rem}
+.page-intro p{color:var(--muted)}
+
+.menu-section{margin:2rem 0}
+.menu-section h2{font-size:1.5rem;font-family:'Playfair Display',serif;color:var(--title);margin-bottom:0.8rem}
+.menu-list{list-style:none;padding:0;margin:0}
+.menu-list li{padding:0.7rem 0;border-bottom:1px dashed var(--frame-border);color:var(--text)}
+
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem}
+.contact-grid h3{color:var(--title)}
+.contact-grid p{color:var(--muted)}
+
+.team{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2rem}
+.team-card h3{margin-top:0;color:var(--title)}
+
+.reservation-form{max-width:700px;margin:0 auto}
+.form-row{display:flex;flex-direction:column;margin-bottom:0.9rem}
+.form-row label{margin-bottom:0.4rem;color:var(--title);font-weight:600}
+.form-row input,.form-row textarea{padding:0.6rem;border-radius:8px;border:1px solid var(--frame-border);
+  font-family:inherit;background:#1f1f25;color:var(--text)}
+
+/* Contact Form */
+#contactForm {
+  background: var(--card);
+  border: 2px solid var(--frame-border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+  max-width: 600px;
+  margin: 2rem auto;
+}
+#contactForm h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: 'Playfair Display', serif;
+  color: var(--title);
+}
+#contactForm .form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+#contactForm label {
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: var(--title);
+}
+#contactForm input,
+#contactForm textarea {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--frame-border);
+  font-family: inherit;
+  font-size: 1rem;
+  background: #1f1f25;
+  color: var(--text);
+  width: 100%;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+#contactForm input:focus,
+#contactForm textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(212,175,55,0.3);
+  outline: none;
+}
+#contactForm textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+#contactForm button {
+  margin-top: 1rem;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+iframe {
+  margin-top: 1rem;
+  width: 100%;
+  height: 250px;
+  border: 0;
+  border-radius: var(--radius);
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .nav{display:none}
+  .nav-toggle{display:block}
+  .highlights{flex-direction:column}
+  .contact-grid{grid-template-columns:1fr}
+  .team{grid-template-columns:1fr}
+}
+
+/* Focus styles */
+a.btn:focus,button:focus,input:focus,textarea:focus{outline:3px solid rgba(212,175,55,0.5);outline-offset:2px}
